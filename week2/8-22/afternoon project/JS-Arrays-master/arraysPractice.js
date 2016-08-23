@@ -294,8 +294,15 @@ Loop through your devMountainEmployees until you find cahlan, then remove him fr
 
   //Code Here
 
-for (i = 0; i < devMountainEmployees.length; i++){
-  delete 
+// for (i = 0; i < devMountainEmployees.length; i++){
+for (i = 1; i < devMountainEmployees.length; i++){
+
+
+if (("name" in cahlan) === true){
+devMountainEmployees.splice(i,i);
+break;
+
+}
 }
 
 
@@ -337,7 +344,7 @@ of Data is to have an Array full of objects. */
 //Create an empty array called users.
 
   //Code Here
-
+var users = [];
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
 
@@ -350,7 +357,22 @@ var user1 = {
 };
 
 //Your Code Here
-
+users =
+[user1{
+      name: 'Tyler McGinnis',
+      email: 'tylermcginnis33@gmail.com',
+      password: 'iLoveJavaScript',
+      username: 'infiniateLoop'},
+user2{
+      name: 'John Snow',
+      email: 'imbackbiotch@gmail.com',
+      password: 'winterIsComing',
+      username: 'IknowNothing'},
+user3{
+      name: 'Danesh',
+      email: 'gotohellgilfoyle@gmail.com',
+      password: 'iLovePiedPiper',
+      username: 'IndianDenzel'}];
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
 and those objects contain properties about the specific person you follow.*/
