@@ -238,7 +238,17 @@ function longer(arr1, arr2){
 */
 
   //Code Here
-
+function both(array1, array2){
+  var newArr = [];
+  for (i = 0; i < array1.length; i++){
+    for (j = 0; j < array2.length; j++){
+      if (array1[i] === array2[j]){
+      newArr.push(array1[i]);
+      }
+    }
+  }
+  return newArr;
+}
 
 
 
@@ -278,13 +288,15 @@ array with those four objects. After that console.log the length of the Array an
 sure that it's equal to 4. */
 
   //Code Here
-
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
   //Code Here
 
-
+for (i = 0; i < devMountainEmployees.length; i++){
+  delete 
+}
 
 
 //NEXT PROBLEM
