@@ -12,12 +12,12 @@ var outer = function(){
 // Invoke outer saving the return value into another variable called 'inner'.
 
 // Code Here
-
+var inner = outer();
 
 //Once you do that, invoke inner.
 
   //Code Here
-
+inner();
 
 
 //////////////////PROBLEM 2////////////////////
@@ -36,7 +36,11 @@ var callFriend = function(){
 // Create a makeCall function that when invoked logs  'Calling Jake at 435-215-9248' in your console.
 
   //Code Here
-
+function makeCall(){
+  var callJake = callFriend();
+  console.log(callJake("435-215-9248"));
+}
+// makeCall.call(callFriend);
 
 
 
@@ -52,13 +56,19 @@ var callFriend = function(){
 */
 
 //Code Here
-
+function makeCounter(){
+  var counter = 0;
+  return function inner (){
+    return counter = counter + 1;
+  };
+}
 //Uncomment this once you make your function
-//   var count = makeCounter();
-//   count(); // 1
-//   count(); // 2
-//   count(); // 3
-//   count(); // 4
+  var count = makeCounter();
+  // console.log(count());
+  count(); // 1
+  count(); // 2
+  count(); // 3
+  count(); // 4
 
 
 
@@ -73,16 +83,24 @@ var callFriend = function(){
 
 function counterFactory(value) {
 
-  // Code here.
+
+
 
 
   return {
+    inc: function (){
+      return value += 1;
+    },
+    dec: function (){
+      return value -= 1;
+    }
   }
 }
 
 
 counter = counterFactory(10);
-
+counter.inc();
+counter.dec();
 
 
 
@@ -141,18 +159,18 @@ counter = counterFactory(10);
 // So that it logs ( 0 then 1 then 2 then 3, etc). Run this code in your console to see what the output is.
 
 
-function timeOutCounter() {
-  for (var i = 0; i <= 5; i++) {
-    setTimeout(function() {
-      console.log(i);
-    }, i * 1000)
-  }
-
-  function newScope(i) {
-    console.log(i)
-  }
-}
-timeOutCounter();
+// function timeOutCounter() {
+//   for (var i = 0; i <= 5; i++) {
+//     setTimeout(function() {
+//       console.log(i);
+//     }, i * 1000)
+//   }
+//
+//   function newScope(i) {
+//     console.log(i)
+//   }
+// }
+// timeOutCounter();
   // To make this code work you will need to create a new scope for every iteration.
 
 
