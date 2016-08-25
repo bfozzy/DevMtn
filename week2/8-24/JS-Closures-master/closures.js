@@ -113,12 +113,14 @@ counter.dec();
 
     var welcomeText = 'You\'re doing awesome, keep it up ';
 
-    // code message function here.
+    function message(){
+      return welcomeText + firstname + ' ' + lastname + '.';
+    }
 
 
     //Uncommment this to return the value of your invoked message function
 
-    //return message()
+    return message()
   }
 
   motivation('Billy', 'Bob'); // 'Your doing awesome keep it up Billy Bob
@@ -144,13 +146,15 @@ counter.dec();
     // Anything that is being returned is made public and can be invoked from outside our lexical scope
 
     return {
-      // Code here.
+      publicMethod: function(){
+        return privateMethod();
+      }
     };
 
   })();
 
 //Uncomment this after you create your public method
-//   module.publicMethod();
+  module.publicMethod();
 
 
 
@@ -159,18 +163,20 @@ counter.dec();
 // So that it logs ( 0 then 1 then 2 then 3, etc). Run this code in your console to see what the output is.
 
 
-// function timeOutCounter() {
-//   for (var i = 0; i <= 5; i++) {
-//     setTimeout(function() {
-//       console.log(i);
-//     }, i * 1000)
-//   }
-//
-//   function newScope(i) {
-//     console.log(i)
-//   }
-// }
-// timeOutCounter();
+function timeOutCounter() {
+  for (var i = 0; i <= 5; i++) {
+    setTimeout(function(i) {
+      return function(){
+      	return newScope(i);
+      };
+      } (i), i * 1000);
+  }
+
+  function newScope(i) {
+    console.log(i);
+  }
+}
+timeOutCounter();
   // To make this code work you will need to create a new scope for every iteration.
 
 
@@ -178,9 +184,16 @@ counter.dec();
 
 
 //////////////////PROBLEM 8////////////////////
-
 var funcArray = [];
+function createFunction(i){
+	return function() {
+		return i;
 
+	};
+}
+  for (i = 0; i <= 5; i++){
+   funcArray[i] = createFunction(i)
+}
 /*
   Make the following code work
 
