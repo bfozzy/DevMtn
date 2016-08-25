@@ -75,3 +75,7 @@
     background: #000;
     margin-right:10px;;
 }
+.slide-menu {
+  transform: translateY(0);
+  opacity: 1;
+}
