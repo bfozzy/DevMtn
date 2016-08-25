@@ -19,6 +19,10 @@ $(document).ready(function() {
     task.remove();
 
   }
+  $(document).on("click", "#item", function(e){
+    e.preventDefault();
+  });
+
   var listo = [];
   $("#newTaskForm").hide();
 
@@ -26,7 +30,7 @@ $(document).ready(function() {
   var Task = function(task) {
     this.task = task;
     this.id = "new";
-  }
+  };
   var addTask = function(task){
     if(task){
       task = new Task(task);
@@ -35,11 +39,11 @@ $(document).ready(function() {
       $("#newItemInput").val("");
 
         $("#newList").append(
-          "a href ="#finish" class="" id="item">" +
-          "<li class="list-group-item">" +
+          '<a href="#finish" class="" id="item">' +
+          '<li class="list-group-item">' +
           "<h3>" + task.task + "</h3>" +
-          "<span class="arrow pull-right">" +
-          "<i class="glyphicon glyphicon-arrow-right">" +
+          '<span class="arrow pull-right">' +
+          '<i class="glyphicon glyphicon-arrow-right">' +
           "</span>" +
           "</li>" +
           "</a>"
@@ -61,10 +65,34 @@ $(document).ready(function() {
       e.preventDefault();
       $("#newTaskForm").fadeToggle("fast", "linear");
   });
+  $(document).on('click', '#item', function(e) {
+    e.preventDefault();
+    var task = this;
+    advanceTask(task);
+    this.id = 'inProgress';
+  });
+  $(document).on('click', '#item', function(e) {
+  	e.preventDefault();
+    var task = this;
+    advanceTask(task);
+    this.id = 'inProgress';
+    $('#currentList').append(this.outerHTML);
+  });
 
 
-
-
+  $(document).on('click', '#inProgress', function (e) {
+    e.preventDefault();
+    var task = this;
+    task.id = "archived";
+    var changeIcon = task.outerHTML.replace('glyphicon-arrow-right', 'glyphicon-remove');
+    advanceTask(task);
+    $('#archivedList').append(changeIcon);
+  });
+  $(document).on('click', '#archived', function (e) {
+    e.preventDefault();
+    var task = this;
+    advanceTask(task);
+  });
 
 
 
