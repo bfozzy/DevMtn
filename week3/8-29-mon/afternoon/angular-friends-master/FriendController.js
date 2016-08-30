@@ -1,7 +1,7 @@
 angular.module("friendsList").controller("mainCtrl", function($scope){
 //variables
-var sortProp;
-var sortDirection = true;
+var sortProp = "name";
+var sortDirection = "+";
 $scope.friends = [
   {
     "name": "Preston McNeil",
