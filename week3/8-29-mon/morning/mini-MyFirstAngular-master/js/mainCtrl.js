@@ -6,6 +6,5 @@ angular.module('friendsList').controller('mainCtrl', function($scope){
         $scope.friends.push(friend);
          alert("Friend Added");
 
-    // });
   };
 });
