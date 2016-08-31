@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
 html {
   height: 100%;
   width: 100%;
@@ -6,15 +7,26 @@ html {
 body {
   height: 95%;
   width: 100%;
-  font-family: sans-serif;
+font-family: 'Roboto', sans-serif;
 }
 
 .main-container {
-  width: 75%;
-  margin: 10px auto;
+  width: 100%;
+  /*margin: 10px auto;*/
   background: rgba(255, 255, 255, 0.86);
-  padding: 5px;
-  border-radius: 10px;
+  /*padding: 5px;*/
+  /*border-radius: 10px;*/
+}
+.main-header{
+  background-color: #172845;
+  position: relative;
+  top: 0px;
+  width: 100vw;
+  padding-bottom: 5vh;
+}
+.main-header h1{
+color: white;
+
 }
 
 .main-container h1 {
@@ -22,12 +34,19 @@ body {
 }
 
 .text-box {
-  margin: 0px auto;
+  margin: 20px auto;
   width: 40%;
+  padding: 20px;
 }
-
+.messages{
+  border-color: black;
+  border-style: solid;
+  border: 1px;
+}
 p{
   text-align: center;
   margin: 3px 0;
   font-size: 17px;
+
 }
+.glyphicon-envelope

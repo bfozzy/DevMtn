@@ -6,8 +6,10 @@ angular.module('chatroom').controller('mainCtrl', function($scope, messageServic
 
 $scope.getMessages = function(){ messageService.getMessages().then(function(data){
 
-// console.log(data)
+console.log(data)
 $scope.messages = data.data;
+// $scope.cookies = data.cookie;
+$scope.time = data.createdAt;
 });
 }
 
