@@ -1,0 +1,10 @@
+.nav{
+  background: lightgrey;
+}
+.lessonDiv{
+  height: 100px;
+  width: 100px;
+  background: lightblue;
+  padding: 20px;
+  border-radius: 50px
+}

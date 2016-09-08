@@ -1,17 +1,12 @@
 angular.module('devmtnTravel')
-    .controller("bookedCtrl", function($scope, mainSrv, $state) {
-        $scope.packageInfo = mainSrv.travelInfo;
-        console.log($scope.packageInfo);
-        console.log($state);
-        var currentId = $state.params.id;
-        var pack = $scope.packageInfo;
+    .controller("bookedCtrl", function($scope, mainSrv, $stateParams) {
 
 
-        // for (var i = 0; i < pack.length;) {
-        //     if (pack[i].id === currentId) {
-        //         $scope.currentObj = pack[i];
-        //     }
-        // }
+        for (var i = 0; i < mainSrv.travelInfo.length; i++) {
+            if (mainSrv.travelInfo[i].id == $stateParams.id) {
+                $scope.currentObj = mainSrv.travelInfo[i].city;
+            }
+        }
 
         // getObj();
 

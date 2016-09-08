@@ -1,0 +1,6 @@
+<h1>{{routeName}}</h1>
+
+<p ng-repeat="person in people"><a ui-sref="details({url: person.url})">{{person.name}}</a>
+
+</p>
+<!-- use us-sref to click on a person, then redirect to detials, and pass in thier id to $stateParams -->

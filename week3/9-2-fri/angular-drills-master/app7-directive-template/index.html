@@ -1,10 +1,30 @@
-<html>
-	<body>
-		<h1>app7 - directive-template</h1>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-		<script src="directive.js"></script>
-	</body>
+<html ng-app="directiveApp">
+
+<head>
+	<link rel="stylesheet" href="./style.css" media="screen" title="no title">
+</head>
+
+<body ng-controller="mainController">
+	<dm-header callback="myFunc()" title="Brad's cool webpage"></dm-header>
+
+
+
+	<h1>app7 - directive-template</h1>
+
+
+
+
+
+
+
+
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+	<script src="directive.js"></script>
+</body>
+
 </html>
