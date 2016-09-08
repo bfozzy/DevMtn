@@ -14,7 +14,9 @@ angular.module("app")
             },
             controller: function($scope, mainService) {
                 //pull in an array of objects with each person in the band that has a little bio on them
-
+                $scope.artist = getArtist().then(function(response) {
+                    return response.data;
+                })
 
                 //working
             }
