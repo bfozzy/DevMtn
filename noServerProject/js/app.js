@@ -11,7 +11,7 @@ angular.module("app", ["ui.router"])
                 url: "/bio"
             })
             .state("music", {
-                templateUrl: "./js/music/music.html",
+                template: "<music-directive></music-directive>",
                 url: "/music"
             })
 

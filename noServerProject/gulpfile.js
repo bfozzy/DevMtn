@@ -2,7 +2,7 @@ const gulp = require("gulp");
 const concat = require("gulp-concat");
 const babel = require("gulp-babel");
 const sass = require("gulp-sass");
-gulp.task("concat", function() {
+gulp.task("js", function() {
     gulp.src(["./js/app.js", "./js/*.js"]) //can drop in an array of files or use a wildcard
         .pipe(concat("all.js"))
         .pipe(babel({
@@ -18,7 +18,7 @@ gulp.task("sass", function() {
         .pipe(gulp.dest("./dist"))
 })
 
-gulp.task("default", ["concat", "sass"]);
+gulp.task("default", ["js", "sass"]);
 
-gulp.watch(["./js/**/*.js"], ["concat"]);
-gulp.watch(["./css/*{.scss,.css}"], ["concat"]);
+gulp.watch(["./js/**/*.js"], ["js"]);
+gulp.watch(["./css/*{.scss,.css}"], ["sass"]);

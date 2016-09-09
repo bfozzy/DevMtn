@@ -3,19 +3,26 @@
 
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="./dist/all.css" media="screen" title="no title">
+
 
     <!-- I need to link up my all.css file and my all.js file -->
     <title></title>
 </head>
 
-<body ng-controller="mainCtrl">
-    <section>
-        <header>
-
-        </header>
-    </section>
-    <div ui-view> </div>
-
+<body class="body" ng-controller="mainCtrl">
+    <header class="nav">
+        <ul>
+            <li><a ui-sref="home">Home</a></li>
+            <li>
+                <a ui-sref="bio">Bio</a>
+            </li>
+            <li><a ui-sref="music">Music</a></li>
+            <li>Tour</li>
+            <li>Art</li>
+        </ul>
+    </header>
+    <ui-view></ui-view>
 
 
 

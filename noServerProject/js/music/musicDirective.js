@@ -7,18 +7,20 @@ angular.module("app")
             // scope: {
             //     personData: '='
             // },
-            link: function(scope, element, attributes) {
-                //here I could include a function set to scope that has an ng-hover or click to expand text for each person image.
-
-
-            },
+            // link: function(scope, element, attributes) {
+            //     //here I could include a function set to scope that has an ng-hover or click to expand text for each person image.
+            //
+            //
+            // },
             controller: function($scope, mainService) {
                 //pull in an array of objects with each person in the band that has a little bio on them
-                $scope.artist = getArtist().then(function(response) {
+                $scope.artist = mainService.getArtist().then(function(response) {
                     return response.data;
                 })
+                $scope.albums = mainService.getAlbums().then(function(response) {
+                    return response.albums;
+                })
 
-                //working
             }
 
 
