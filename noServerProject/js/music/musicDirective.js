@@ -1,7 +1,7 @@
 angular.module("app")
     .directive("musicDirective", function() {
         return {
-            templateUrl: "js/music/music.html",
+            templateUrl: "js/music/musicDirectiveTemplate.html",
             //template: '<input ng-model="data" type="text"/>'
             restrict: "AE",
             // scope: {
@@ -17,8 +17,8 @@ angular.module("app")
                 $scope.artist = mainService.getArtist().then(function(response) {
                     return response.data;
                 })
-                $scope.albums = mainService.getAlbums().then(function(response) {
-                    return response.albums;
+                mainService.getAlbums().then(function(response) {
+                    $scope.albums = response.albums;
                 })
 
             }

@@ -1,30 +1,43 @@
 .body {
-  background: url('../images/background.jpg');
+  display: flex;
+  background: url('../images/background.jpg') no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: fixed;
+height: 100vh;
 }
 .header {
-position: relative;
+// position: fixed;
+display: flex;
+
 }
 .nav{
-  width: 100%;
-  height: 20%;
-  background-color: black;
-  opacity: .5;
+  width: 100vw;
+  height: 80px;
+  background-color: #282C34;
+  opacity: .8;
   position: fixed;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+
 
   ul{
-    display: inline-flex;
-    text-decoration: none;
-
+  display: none;
 
 
     li{
       color: white;
-
+      margin: 5px;
     }
   }
+}
+a{
+  color: white;
+}
+a:hover{
+  color: #F20018;
+  text-decoration: none;
 }
 ui-view{
   display: flex;
@@ -34,3 +47,41 @@ ui-view{
   height: auto;
   width: 150px;
 }
+.main-display{
+  height: 80vh;
+  width: 80vw;
+  background-color: black;
+  position: fixed;
+  top: 10vh;
+  left: 10vh;
+  overflow: scroll;
+}
+
+@media(min-width: 768px){
+// .ham{
+//   display: none;
+// }
+  .nav ul{
+  display: flex;
+  }
+  // .main-header{
+  //   /*opacity: 0;*/
+  //   background: none;
+  // }
+}
+
+// you need to nest divs to get them to display properly. A div will take on the qualities of its parent. So if you want two divs in line and to have 5 of those pairs in a column you'll want to nest both divs inside another div and set the display property to make them inline.
+//
+// flex-direction: row-reverse, column, column-reverse,
+// flex-wrap:
+// justify-content: flex-start, flex-end, center, space-between, space-around,
+// align-items: flex-start, flex-end, center, stretch, baseline
+// align-content: center(it wont do anything unless you have flex wrap on and the width of all the divs is greater than it's parent. Then it will wrap in the center of the div), flex-start, flex-end,
+//
+// These all affect children
+//
+// order: if you select a child you can can change the order of the display of the items. This works like a z-index as in you have to order them all.
+// flex-grow: you can select a child item and give it a number that will make it grow.
+// flex-shrink: you can choose a child item and select it to shrink if the width of all the items is more than the max width of the parent.
+// flex-basis: it will change the width or height depending on whether the items are aligned in a row or column.
+// align-self: if you select a child you can choose flex end and it will go to the bottom of the parent. center, flex-start, stretch will let it take as much space needed from top to bottom if there isn't a defined height.
