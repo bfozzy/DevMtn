@@ -9,7 +9,10 @@ angular.module("app")
             // },
             link: function(scope, element, attributes) {
                 //here I could include a function set to scope that has an ng-hover or click to expand text for each person image.
-
+                // scope.targetElement = $(".profile-container");
+                // element.on("click", function(event){
+                //   element.fadeout();
+                // })
 
             },
             controller: function($scope, mainService) {

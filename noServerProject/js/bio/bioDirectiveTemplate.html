@@ -14,7 +14,7 @@
   <div class="profile-container"ng-repeat="member in members">
     <div class="photo-container">
       <a ng-click="showProfile = ! showProfile">
-        <img class="profile-pics" ng-src="{{member.picture}}" alt="{{member.name}}"/>
+        <img id="slider"class="profile-pics" ng-src="{{member.picture}}" alt="{{member.name}}"/>
       </a>
     </div>
     <div ng-show="showProfile"class="individual-bio-text">
@@ -24,3 +24,4 @@
     </div>
   </div>
 </section>
+<script src="./js/jq.js" charset="utf-8"></script>

@@ -7,14 +7,11 @@ angular.module("app")
             // scope: {
             //     personData: '='
             // },
-            link: function(scope, element, attributes) {
+            link: function(scope, element, attr) {
                 //here I could include a function set to scope that has an ng-hover or click to expand text for each person image.
-                // scope.trackDuration = scope.track.duration_ms;
-            scope.trackLength = function(){
-              const minutes = Math.floor((trackDuration * 1000) / 60);
-              const seconds = (trackDuration * 1000) % 60;
-              return minutes.toString() + ":" + seconds.toString();
-            }
+
+
+
 
             },
             controller: function($scope, mainService) {
@@ -24,8 +21,13 @@ angular.module("app")
                 })
                 mainService.getAlbums().then(function(response) {
                     $scope.albums = response.albums;
-
                 })
+                $scope.playTrack = function(url){
+                  var playing = false;
+                  var audio = new Audio(url);
+                  audio.play();
+                };
+
                 // $scope.showTracks = function(){
                 //
                 // }

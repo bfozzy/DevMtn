@@ -129,6 +129,9 @@ ui-view{
   left: 5vw;
   overflow: scroll;
 }
+::-webkit-scrollbar{
+  display: none;
+}
 //bio section
 .band-profile-wrapper{
   display: flex;
@@ -166,6 +169,7 @@ flex-direction: column;
   display: inline-flex;
   position: relative;
   align-items: center;
+  justify-content: center;
 }
 .photo-container{
   display: inline-flex;
@@ -185,6 +189,9 @@ width: 200px;
 
 
 //music view
+.music-wrapper{
+
+}
 .album-wrapper-parent{
   display: flex;
   flex-direction: column;
@@ -208,6 +215,11 @@ align-items: center;
   height: auto;
   width: auto;
   margin-left: 10px;
+  font-size: 1em;
+}
+.play-button{
+  background-color: #282C34;
+  border: none;
 }
 .album-art-wrapper{
   display: flex;
@@ -226,6 +238,7 @@ width:371px;
   letter-spacing: 1px;
   margin-top: 5px;
   margin-bottom: 5px;
+
 }
 
 @media(min-width: 768px){

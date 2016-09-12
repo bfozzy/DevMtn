@@ -1,0 +1,19 @@
+<div class="main-display">
+  <h1>Fall Tour</h1>
+  <div class="tour-table">
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Venue</th>
+        <th>City</th>
+        <th>Purchase</th>
+      </tr>
+      <tr ng-repeat="show in tourDates">
+        <th>{{show.date}}</th>
+        <th>{{show.venue}}</th>
+        <th>{{show.city}}</th>
+        <th><a ng-href=show.buy><button type="button" name="button">Buy Tickets!</button></a></th>
+      </tr>
+    </table>
+  </div>
+</div>

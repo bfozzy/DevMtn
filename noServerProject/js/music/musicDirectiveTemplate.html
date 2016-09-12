@@ -1,16 +1,24 @@
+<div class="music-wrapper">
+
 <div class="album-wrapper-parent" ng-repeat="album in albums">
   <div class="album-wrapper">
     <div class="album-art-wrapper">
 
       <a ng-click="showTracks = ! showTracks">
-        <img class="album-art" src="{{album.images[0].url}}" alt=""/>
+        <img ng-mouseover="expandAlbum" class="album-art" ng-src="{{album.images[0].url}}" alt=""/>
       </a>
     </div>
     <div class="album-info">
         <div ng-show="showTracks"class="tracks">
           <ol ng-repeat="track in album.tracks.items">
 
-            <li class="track-list">{{track.track_number}}. {{track.name}}</li><hr>
+            <li ng-mouseenter="hover = true" ng-mouseleave="hover = false" class="track-list">
+                <span ng-hide="hover">{{track.track_number}}.</span>
+                <span ng-show="hover"><button ng-click="playTrack(track.preview_url)" class="play-button"><img ng-src="../../images/play.png" alt="play"/></button>
+                </span> {{track.name}}
+            </li>
+                <!-- <audio><source src="https://p.scdn.co/mp3-preview/580a36e146ece360562f3cd0965c82ca4c3de4a9" type="audio/mpeg">If you can see this, update your browser.</audio> -->
+                  <hr>
           </ol>
         </div>
     </div>
@@ -19,3 +27,6 @@
     </div>
 
   </div>
+</div>
+id=
+<!-- "sound.{{track.name}}" -->

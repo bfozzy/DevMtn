@@ -143,6 +143,9 @@ ui-view {
   left: 5vw;
   overflow: scroll; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 .band-profile-wrapper {
   display: flex;
   position: relative;
@@ -175,7 +178,8 @@ ui-view {
 .profile-container {
   display: inline-flex;
   position: relative;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 .photo-container {
   display: inline-flex;
@@ -211,7 +215,12 @@ ui-view {
 .tracks {
   height: auto;
   width: auto;
-  margin-left: 10px; }
+  margin-left: 10px;
+  font-size: 1em; }
+
+.play-button {
+  background-color: #282C34;
+  border: none; }
 
 .album-art-wrapper {
   display: flex;
