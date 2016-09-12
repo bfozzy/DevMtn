@@ -1,7 +1,21 @@
-<div ng-repeat="album in albums">
-  <div class="">
-  {{album.name}}
+<div class="album-wrapper-parent" ng-repeat="album in albums">
+  <div class="album-wrapper">
+    <div class="album-art-wrapper">
+
+      <a ng-click="showTracks = ! showTracks">
+        <img class="album-art" src="{{album.images[0].url}}" alt=""/>
+      </a>
+    </div>
+    <div class="album-info">
+        <div ng-show="showTracks"class="tracks">
+          <ol ng-repeat="track in album.tracks.items">
+
+            <li class="track-list">{{track.track_number}}. {{track.name}}</li><hr>
+          </ol>
+        </div>
+    </div>
+
+
+    </div>
+
   </div>
-  <img src="{{album.images[0].url}}" alt="" />
-</div>
-<h1>test</h1>

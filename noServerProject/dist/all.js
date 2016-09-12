@@ -35,6 +35,15 @@ angular.module("app") //working
             return response.data;
         });
     };
+    // this.getTracks = function(){
+    //       return $http({
+    //               method: "GET",
+    //               url: "https://api.spotify.com/v1/albums/?ids=6VoOCCv0bXPrTHDncJyIgF,1OWNvsDzhEwT5cXLlo9iO7,7tQ6vsgZaRnCCFg7z2utU3,5ZqlTo5phfbqoMWFnGVCbE,2YCy2HmHCqh2yOoDuDFHhI,2YCy2HmHCqh2yOoDuDFHhI,19MdRkaOhipULC6AR5HWZ0,4uAeuGC5OCKJFRbd2F0FBj"
+    //           })
+    //           .then(function(response) {
+    //               return response.data;
+    //           });
+    // }
     this.members = [{
         name: "John Baldwin Gourley",
         position: "lead Vocals, guitar, organ, drum machines",
@@ -118,4 +127,7 @@ angular.module("app") //working
     // __proto__
     // :
     // Object
+
+
+    this.ptmbio = "There has to be some credit given for this band's name alone -- co-founder John Gourley once explained it as an attempt to create a demi-mythic entity bigger than the individual members. Formed in Wasilla, Alaska, Portugal. The Man (yes, there's a period in the middle of their name) grew out of the ashes of Anatomy of a Ghost, a post-hardcore band whose vocalist and guitarist -- Gourley and Zach Carothers, respectively -- opted to continue working together. Rounding out the new band's lineup was keyboardist/singer Wes Hubbard, himself a veteran of other Alaskan groups, and the trio eventually relocated from Alaska to Portland, Oregon. Their initial existence in the Pacific Northwest was the typical harscrabble life of a band with few resources, but drummer Jason Sechrist (formerly of Konamai Defense System) joined to form a more stable lineup. The band’s profile received a boost from the internet (the musicians made heavy use of MySpace and PureVolume for promotional purposes), and Portugal. The Man released an initial EP in 2005 before issuing their debut album, Waiter: You Vultures!, in early 2006. The next year, the group (whose lineup had once again reverted to three members, as Hubbard had left and was replaced by touring keyboardist Ryan Neighbors), issued Church Mouth, whose aggressive sound bore traces of Led Zeppelin and Jane’s Addiction. The bandmates then opted to finance their third record themselves, drawing upon a wealth of guest musicians — including trombonists, trumpeters, and violinists — to create the eclectic Censored Colors. In 2009 the group released The Satanic Satanist, then quickly followed up the next year with the mellower and more electronic American Ghetto. Later that year, the band signed with Atlantic Records. Guitarist Noah Gersh joined the band for their 2011 summer tour. The group recorded their major label debut album, In the Mountain in the Cloud in late 2011; it was produced by John Hill, mixed by Andy Wallace, and released in July of 2012. A month earlier, Sleep Forever, a 13-minute short directed by Michael Ragen, and shot entirely in Gourley’s hometown, premiered on the Independent Film Channel. This was the last recording for member Securest and Neighbors who were replaced by drummer Kane Richotte and keyboardist Kyle O’Quin. Portugal. The Man enlisted Danger Mouse (Brian Burton) as producer for 2013’s Evil Friends; the album was released in June of 2003. The band is currently working on their 9th studio album, 'Gloomin + Doomin', which should be released in the near future.";
 });

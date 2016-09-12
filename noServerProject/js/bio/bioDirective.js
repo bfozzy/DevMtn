@@ -15,6 +15,7 @@ angular.module("app")
             controller: function($scope, mainService) {
                 //pull in an array of objects with each person in the band that has a little bio on them
                 $scope.members = mainService.members;
+                $scope.mainBio = mainService.ptmbio;
 
 
                 //working

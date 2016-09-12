@@ -1,16 +1,26 @@
-<!-- <div class="bio-wrapper">
-  <div class="bio-image-wrapper">
-    <img ng-src="{{personData.imagePath}}" alt="" />
-  </div>
-  <div class="bio-wrapper-text">
-    <p>
-      {{personData.bio}}
-    </p>
-  </div>
-</div> -->
-<!-- <h2>bioDirective template is working!</h2> -->
-<div class="profile-container"ng-repeat="member in members">
-  {{member.name}}
-  <img class="profile-pics" ng-src="{{member.picture}}" alt="{{member.name}}" />
 
-</div>
+<section class="band-profile-wrapper">
+  <div class="band-profile">
+    <div class="band-picture-section">
+      <img class="band-picture" src="/images/bioimage.jpg" alt="Portugal. The Man" />
+    </div>
+    <div class="band-bio">
+      <p>{{mainBio}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="ind-profile-wrapper">
+  <div class="profile-container"ng-repeat="member in members">
+    <div class="photo-container">
+      <a ng-click="showProfile = ! showProfile">
+        <img class="profile-pics" ng-src="{{member.picture}}" alt="{{member.name}}"/>
+      </a>
+    </div>
+    <div ng-show="showProfile"class="individual-bio-text">
+      <h1>{{member.name}}</h1> <br>
+      <h2>Position:  {{member.position}} </h2><br>
+      <h2>Born in {{member.birthPlace}}</h2>
+    </div>
+  </div>
+</section>

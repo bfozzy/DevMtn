@@ -11,19 +11,33 @@
     <title>Portugal. The Man</title>
 </head>
 
-<body class="body" ng-controller="mainCtrl">
+<body ng-controller="mainCtrl">
+  <section class="body-wrapper">
+
+
+
     <header class="nav">
-        <ul>
-            <li><a ui-sref="home">Home</a></li>
-            <li>
-                <a ui-sref="bio">Bio</a>
+      <div class="logo">
+        <img class="img" src="./images/logo.jpg" alt="Portugal. The Man" />
+      </div>
+      <div class="ham">
+        <img class="red-ham"src="./images/redmenu.png" alt="" />
+      </div>
+        <ul class="nav-ul">
+            <li class="nav-li"><a ui-sref="home"><h1>HOME</h1></a></li>
+            <li class="nav-li">
+                <a ui-sref="bio"><h1>BIO</h1></a>
             </li>
-            <li><a ui-sref="music">Music</a></li>
-            <li>Tour</li>
-            <li>Art</li>
+            <li class="nav-li"><a ui-sref="music"><h1>MUSIC</h1></a></li>
+            <li class="nav-li"><h1>TOUR</h1></li>
+            <li class="nav-li"><h1>ART</h1></li>
         </ul>
     </header>
-    <ui-view></ui-view>
+
+    <div class="ui-parent">
+      <ui-view></ui-view>
+    </div>
+  </section>
 
 
 

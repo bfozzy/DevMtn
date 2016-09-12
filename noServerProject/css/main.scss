@@ -1,73 +1,260 @@
-.body {
+@import 'https://fonts.googleapis.com/css?family=Neuton';
+h1, h2, h3, h4, h5, h6, p{
+  font-family: 'Neuton', Lucida, 'Geneva', Verdana, sans-serif;
+  color: #FCFCFC;
+  // font-weight: lighter;
+  letter-spacing: 1px;
+
+}
+h1{
+  font-family: 'Neuton', Lucida, 'Geneva', Verdana, sans-serif;
+  font-size: 1.4em;
+  font-weight: lighter;
+}
+
+
+h2{
+  font-size: 1.0em;
+  color: #FCFCFC;
+  font-weight: normal;;
+}
+.body-wrapper {
   display: flex;
+  position: relative;
+
   background: url('../images/background.jpg') no-repeat center;
   background-size: cover;
   background-repeat: no-repeat;
-height: 100vh;
-}
-.header {
-// position: fixed;
-display: flex;
+  height: 100vh;
+  width: 100vw;
+
 
 }
+
+
+// Header and Nav
+.header {
+display: flex;
+position: relative;
+
+}
+
 .nav{
   width: 100vw;
-  height: 80px;
-  background-color: #282C34;
-  opacity: .8;
-  position: fixed;
+  height: 65px; //65px mobile friendly
+  background-color: #30302E;
+
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+  .logo{
+  //   width: 100vw;
+    height: 57px;
+    align-items: flex-start;
+    display: flex;
+    margin-left: 15px;
+    margin-top: 5px;
+  //   padding-right: 50%;
+  // margin: 15px;
+}
+    .img{
+    // width: 100%;
+    max-height: 100%;
+    width: auto;
+    display: flex;
+  }
 
 
-  ul{
+  .nav-ul{
   display: none;
 
+}
 
-    li{
+    .nav-li{
       color: white;
       margin: 5px;
+
     }
-  }
+
+.ham{
+  height: 57px;
+  align-items: flex-start;
+  display: flex;
+  margin-left: 15px;
+
+}
+.red-ham{
+  max-height: 100%;
+  width: auto;
+  display: flex;
 }
 a{
   color: white;
+  text-decoration: none;
+
 }
 a:hover{
-  color: #F20018;
   text-decoration: none;
+  font-weight: bold;
+}
+a:visited{
+  text-decoration: none;
+  color: #F20018;
+
+}
+
+//main content
+.ui-parent{
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
 }
 ui-view{
   display: flex;
   position: relative;
-}
-.profile-container {
-  height: auto;
-  width: 150px;
+  align-items: center;
+
 }
 .main-display{
   height: 80vh;
-  width: 80vw;
-  background-color: black;
+  width: 90vw;
+  background-color: #282C34;
   position: fixed;
-  top: 10vh;
-  left: 10vh;
+  display: flex;
+  top: 100px;
+  left: 5vw;
   overflow: scroll;
+}
+//bio section
+.band-profile-wrapper{
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.band-profile{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+.band-picture-section{
+width: 100%;
+height: auto;
+}
+.band-picture{
+  width: 101%;
+  height: auto;
+}
+.band-bio{
+width: 85%;
+height: 30vh;
+overflow: scroll;
+}
+
+.ind-profile-wrapper{
+  display: flex;
+flex-direction: column;
+}
+.profile-container {
+  // height: 150px;
+  // width: 250px;
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+}
+.photo-container{
+  display: inline-flex;
+align-items: center;
+}
+.profile-pics{
+  height: 373px;
+  width: auto;
+  position: relative;
+  margin: auto;
+
+}
+.individual-bio-text{
+width: 200px;
+}
+
+
+
+//music view
+.album-wrapper-parent{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.album-wrapper{
+  display: flex;
+justify-content: flex-start;
+flex-wrap: wrap;
+  width: 90vw;
+  height: auto;
+
+}
+.album-info{
+  height: auto;
+  width: 45vw;
+  display: flex;
+align-items: center;
+}
+.tracks{
+  height: auto;
+  width: auto;
+  margin-left: 10px;
+}
+.album-art-wrapper{
+  display: flex;
+  height: 371px;
+  width: 371px;
+  position: relative;
+}
+.album-art-wrapper img{
+height: 371px;
+width:371px;
+}
+
+.track-list{
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 @media(min-width: 768px){
-// .ham{
-//   display: none;
-// }
-  .nav ul{
+.ham .red-ham {
+  display: none;
+}
+.logo{
+height: 80px;
+}
+.nav{
+height: 90px;
+align-items: flex-end;
+
+}
+  .nav .nav-ul{
   display: flex;
   }
   // .main-header{
   //   /*opacity: 0;*/
   //   background: none;
   // }
+  .album-wrapper{
+    margin: 10px;
+    margin-top: 10px;
+  }
+  .track-list{
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 // you need to nest divs to get them to display properly. A div will take on the qualities of its parent. So if you want two divs in line and to have 5 of those pairs in a column you'll want to nest both divs inside another div and set the display property to make them inline.
