@@ -12,8 +12,8 @@ angular.module("app", ["ui.router"])
             })
             .state("music", {
                 templateUrl: "./js/music/music.html",
-                url: "/music",
-                onExit: function()
+                url: "/music"
+                // onExit: function()
             })
             .state("tour", {
                 templateUrl: "./js/tour/tour.html",
