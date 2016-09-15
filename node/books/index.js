@@ -1,6 +1,6 @@
 var express = require ("express");
 var bodyParser = require("body-parser");
-
+var config = require("./config.json");
 
 var books = [
   {title: "The Great Gatsby",
@@ -29,7 +29,6 @@ res.status(200).json(books);
 })
 
 
-
-app.listen(8080, function(){
-  console.log("listening on port 8080");
+app.listen(config.port, function(){
+  console.log("listening on port", config.port);
 });
